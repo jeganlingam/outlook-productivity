@@ -37,6 +37,9 @@
 			this.tab1 = this.Factory.CreateRibbonTab();
 			this.ProductivityGroup = this.Factory.CreateRibbonGroup();
 			this.BtnIgnore = this.Factory.CreateRibbonButton();
+			this.BtnTest = this.Factory.CreateRibbonButton();
+			this.BtnUndoIgnore = this.Factory.CreateRibbonButton();
+			this.TxtSpecialWords = this.Factory.CreateRibbonEditBox();
 			this.tab1.SuspendLayout();
 			this.ProductivityGroup.SuspendLayout();
 			this.SuspendLayout();
@@ -52,6 +55,9 @@
 			// ProductivityGroup
 			// 
 			this.ProductivityGroup.Items.Add(this.BtnIgnore);
+			this.ProductivityGroup.Items.Add(this.BtnUndoIgnore);
+			this.ProductivityGroup.Items.Add(this.TxtSpecialWords);
+			this.ProductivityGroup.Items.Add(this.BtnTest);
 			this.ProductivityGroup.Label = "Productivity";
 			this.ProductivityGroup.Name = "ProductivityGroup";
 			// 
@@ -60,6 +66,24 @@
 			this.BtnIgnore.Label = "Ignore";
 			this.BtnIgnore.Name = "BtnIgnore";
 			this.BtnIgnore.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnIgnore_Click);
+			// 
+			// BtnTest
+			// 
+			this.BtnTest.Label = "Test";
+			this.BtnTest.Name = "BtnTest";
+			this.BtnTest.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnTest_Click);
+			// 
+			// BtnUndoIgnore
+			// 
+			this.BtnUndoIgnore.Label = "Undo-Ignore";
+			this.BtnUndoIgnore.Name = "BtnUndoIgnore";
+			this.BtnUndoIgnore.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnUndoIgnore_Click);
+			// 
+			// TxtSpecialWords
+			// 
+			this.TxtSpecialWords.Label = "Special Words";
+			this.TxtSpecialWords.Name = "TxtSpecialWords";
+			this.TxtSpecialWords.TextChanged += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.TxtSpecialWords_TextChanged);
 			// 
 			// CustomRibbon
 			// 
@@ -80,6 +104,9 @@
 		internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
 		internal Microsoft.Office.Tools.Ribbon.RibbonGroup ProductivityGroup;
 		internal Microsoft.Office.Tools.Ribbon.RibbonButton BtnIgnore;
+		internal Microsoft.Office.Tools.Ribbon.RibbonButton BtnTest;
+		internal Microsoft.Office.Tools.Ribbon.RibbonButton BtnUndoIgnore;
+		internal Microsoft.Office.Tools.Ribbon.RibbonEditBox TxtSpecialWords;
 	}
 
 	partial class ThisRibbonCollection
